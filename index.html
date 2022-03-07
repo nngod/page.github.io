@@ -34,8 +34,18 @@
 
       <p class="banner_header_left_p">
         <span>高度负责</span>
-        <span>认证试用</span>
+        <span>认真试用</span>
       </p>
+
+      <div class="banner_header_right_input">
+        <span class="banner_header_right_input_left">拟销试用</span>
+        <span class="banner_header_right_input_right">所有活动</span>
+
+        <div class="banner_header_input_local">
+          <input type="text" />
+          <button class="banner_header_right_input_btn">搜 索</button>
+        </div>
+      </div>
     </div>
 
     <p class="banner_header_p">再也不用担心收不到高质量的试用报告 ！</p>
@@ -56,10 +66,16 @@
     * {
       margin: 0px;
       padding: 0px;
+      user-select: none;
     }
 
     a {
       text-decoration: none;
+    }
+
+    input,
+    button {
+      outline-style: none;
     }
     /* 头部模块顶部 */
     .header {
@@ -149,6 +165,54 @@
       margin-left: 5vw;
       clear: both;
     }
+
+    .banner_header_right_input {
+      float: right;
+    }
+
+    .banner_header_right_input_left {
+      padding: 3px;
+      float: left;
+      margin-right: 10px;
+      border: 1px solid #c0c0c0;
+      border-bottom: 0;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      margin-bottom: -1px;
+    }
+
+    .banner_header_right_input_right {
+      color: #4395ff;
+    }
+
+    .banner_header_input_local {
+      float: left;
+      padding: 5px;
+
+      border: 1px solid #c0c0c0;
+
+      border-radius: 5px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    .banner_header_right_input input {
+      width: 20vw;
+      height: 20px;
+      border: 1px solid #c4c7ce;
+      float: left;
+    }
+
+    .banner_header_right_input_btn {
+      border: 0;
+      float: left;
+      height: 22px;
+      line-height: 22px;
+      width: 70px;
+      font-size: 14px;
+      background-color: #ff6700;
+      color: white;
+    }
     /*  头部标题 */
 
     .whole {
@@ -223,3 +287,4 @@
     }
   </script>
 </html>
+
