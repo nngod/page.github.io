@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+  <body>
+    <!-- 头部模块顶部 -->
+    <div class="header">
+      <span class="left"
+        >您好，欢迎来到试客联盟！ [
+        <a href="javascript:;" class="header_words">请登录</a> ] [
+        <a href="javascript:;" class="header_words">免费注册</a> ]
+      </span>
+      <span class="right">
+        <a href="javascript:;" class="header_words"> 试客联盟首页</a> |
+        <a href="javascript:;" class="header_words"> 试客论坛</a> |
+        <a href="javascript:;" class="header_words">帮助中心</a>
+      </span>
+    </div>
+    <!-- 头部模块顶部 -->
+    <div class="banner_header">
+      <div class="banner_header_left">
+        <span class="banner_header_left_world">试客</span>
+        <span class="banner_header_right_world">联盟</span>
+      </div>
+      <div class="banner_header_right">
+        <span class="banner_header_right_top">拟</span>
+        <span class="banner_header_right_top">销</span>
+        <span class="banner_header_right_top">试</span>
+        <span class="banner_header_right_top">用</span>
+        <div class="banner_header_right_bottom">nixiao.shikee.com</div>
+      </div>
+
+      <p class="banner_header_left_p">
+        <span>高度负责</span>
+        <span>认真试用</span>
+      </p>
+
+      <div class="banner_header_right_input">
+        <span class="banner_header_right_input_left">拟销试用</span>
+        <span class="banner_header_right_input_right">所有活动</span>
+
+        <div class="banner_header_input_local">
+          <input type="text" />
+          <button class="banner_header_right_input_btn">搜 索</button>
+        </div>
+      </div>
+    </div>
+
+    <p class="banner_header_p">再也不用担心收不到高质量的试用报告 ！</p>
+
+    <div class="whole" id="box">
+      <ul class="ul">
+        <li class="current">试客联盟首页</li>
+        <li>品牌频道</li>
+        <li>668诚信频道</li>
+      </ul>
+      <div class="banner show">首页</div>
+      <div class="banner">品牌频道</div>
+      <div class="banner">诚信频道</div>
+    </div>
+  </body>
+
+  <style type="text/css">
+    * {
+      margin: 0px;
+      padding: 0px;
+      user-select: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    input,
+    button {
+      outline-style: none;
+    }
+    /* 头部模块顶部 */
+    .header {
+      width: 100%;
+      background: #eee;
+      border-bottom: 1px solid #ccc;
+      height: 30px;
+      line-height: 30px;
+    }
+
+    .right,
+    .left {
+      display: block;
+    }
+
+    .right {
+      margin-right: 5vw;
+      float: right;
+    }
+
+    .left {
+      margin-left: 5vw;
+      float: left;
+    }
+
+    .header_words {
+      color: #4395ff;
+      opacity: 0.6;
+    }
+
+    .header_words:hover {
+      opacity: 1;
+    }
+
+    /* 头部模块顶部 */
+
+    /*  头部标题 */
+    .banner_header {
+      margin-top: 2vh;
+      width: 90vw;
+      margin-left: 5vw;
+      margin-right: 5vw;
+    }
+
+    .banner_header span {
+      display: block;
+    }
+
+    .banner_header_left {
+      float: left;
+      margin-right: 10px;
+    }
+
+    .banner_header_left_world {
+      float: left;
+      font-size: 40px;
+      color: #4395ff;
+    }
+
+    .banner_header_right_world {
+      float: right;
+      font-size: 40px;
+      color: #ff6700;
+      padding-right: 10px;
+      border-right: 2px solid #ccc;
+    }
+
+    .banner_header_right span {
+      display: inline-block;
+    }
+
+    .banner_header_right_top {
+      float: left;
+      font-size: 30px;
+      color: #ff6700;
+    }
+
+    .banner_header_right_bottom {
+      float: left;
+      margin-left: -120px;
+      margin-top: 40px;
+      color: #ff6700;
+    }
+
+    .banner_header_p {
+      color: #c0c0c0;
+      margin-left: 5vw;
+      clear: both;
+    }
+
+    .banner_header_right_input {
+      float: right;
+    }
+
+    .banner_header_right_input_left {
+      padding: 3px;
+      float: left;
+      margin-right: 10px;
+      border: 1px solid #c0c0c0;
+      border-bottom: 0;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      margin-bottom: -1px;
+    }
+
+    .banner_header_right_input_right {
+      color: #4395ff;
+    }
+
+    .banner_header_input_local {
+      float: left;
+      padding: 5px;
+
+      border: 1px solid #c0c0c0;
+
+      border-radius: 5px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    .banner_header_right_input input {
+      width: 20vw;
+      height: 20px;
+      border: 1px solid #c4c7ce;
+      float: left;
+    }
+
+    .banner_header_right_input_btn {
+      border: 0;
+      float: left;
+      height: 22px;
+      line-height: 22px;
+      width: 70px;
+      font-size: 14px;
+      background-color: #ff6700;
+      color: white;
+    }
+    /*  头部标题 */
+
+    .whole {
+      width: 90vw;
+      height: 400px;
+      margin: 0 auto;
+      border: 1px solid #000;
+      box-sizing: border-box;
+      clear: both;
+      margin-top: 2vh;
+    }
+    .ul {
+      height: 30px;
+      line-height: 30px;
+      border-bottom: 1px solid #000000;
+    }
+
+    .ul li {
+      width: 25%;
+      display: inline-block;
+      list-style: none;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .banner {
+      margin-top: 10px;
+      text-indent: 2em;
+      display: none;
+    }
+
+    .show {
+      display: block;
+    }
+
+    .current {
+      background-color: pink;
+    }
+
+    .banner_header_left_p {
+      float: left;
+    }
+
+    .banner_header_left_p span {
+      margin-top: 30px;
+      margin-left: 10px;
+      font-size: 20px;
+      display: inline-block;
+      margin-right: 0.1vw;
+      color: #c0c0c0;
+    }
+  </style>
+
+  <script type="text/javascript">
+    let box = document.getElementById("box");
+    let lis = document.getElementsByTagName("li");
+    let divs = box.getElementsByTagName("div");
+
+    for (let i = 0; i < lis.length; i++) {
+      lis.index = i;
+
+      lis[i].onclick = function () {
+        for (let j = 0; j < lis.length; j++) {
+          lis[j].classList.remove("current");
+        }
+        this.classList.add("current");
+        for (let k = 0; k < divs.length; k++) {
+          divs[k].classList.remove("show");
+        }
+        divs[i].classList.add("show");
+      };
+    }
+  </script>
+</html>
