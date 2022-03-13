@@ -238,6 +238,11 @@
       cursor: pointer;
     }
 
+    .ul li:hover {
+      background: pink;
+      opacity: 0.7;
+    }
+
     .banner {
       margin-top: 10px;
       text-indent: 2em;
@@ -249,7 +254,8 @@
     }
 
     .current {
-      background-color: pink;
+      background: pink;
+      opacity: 1 !important;
     }
 
     .banner_header_left_p {
@@ -267,23 +273,82 @@
   </style>
 
   <script type="text/javascript">
-    let box = document.getElementById("box");
-    let lis = document.getElementsByTagName("li");
-    let divs = box.getElementsByTagName("div");
+    (function () {
+      class Tab {
+        constructor(
+          selector,
+          options,
+          liListClass1,
+          divClickShow1,
+          divNotShow1
+        ) {
+          // 处理第一个参数
+          if (!selector)
+            throw new ReferenceError(
+              "The first selector parameter must be passed~~"
+            );
+          if (typeof selector === "string")
+            this.container = document.querySelector(selector);
+          else if (selector.nodeType) this.container = selector;
 
-    for (let i = 0; i < lis.length; i++) {
-      lis.index = i;
+          this.initialParams(options);
 
-      lis[i].onclick = function () {
-        for (let j = 0; j < lis.length; j++) {
-          lis[j].classList.remove("current");
+          (this.navBox = this.container.querySelector(".ul")),
+            (this.liList = this.navBox.querySelectorAll("li")),
+            (this.contentList = this.container.querySelectorAll("div")),
+            (this.count = this.liList.length);
+          this.liListClass = liListClass1;
+          this.divClickShow = divClickShow1;
+          this.divNotShow = divNotShow1;
+          this.change();
+          this.handleLi();
         }
-        this.classList.add("current");
-        for (let k = 0; k < divs.length; k++) {
-          divs[k].classList.remove("show");
+
+        // 初始化参数
+        initialParams(options) {
+          let _default = {
+            showIndex: 0,
+            triggerEvent: "click",
+          };
+
+          for (let key in options) {
+            if (!options.hasOwnProperty(key)) break;
+            _default[key] = options[key];
+          }
+
+          // 把信息挂载到实例上
+          for (let key in _default) {
+            if (!_default.hasOwnProperty(key)) break;
+            this[key] = _default[key];
+          }
         }
-        divs[i].classList.add("show");
-      };
-    }
+
+        // 切换标题
+        change() {
+          [].forEach.call(this.liList, (item, index) => {
+            if (index === this.showIndex) {
+              this.liList[index].className = this.liListClass;
+              this.contentList[index].className = this.divClickShow;
+              return;
+            }
+            this.liList[index].className = "";
+            this.contentList[index].className = this.divNotShow;
+          });
+        }
+
+        // 绑定标题对应的事件
+        handleLi() {
+          [].forEach.call(this.liList, (item, index) => {
+            item.addEventListener(this.triggerEvent, () => {
+              this.showIndex = index;
+              this.change();
+            });
+          });
+        }
+      }
+      window.Tab = Tab;
+    })();
+
+    new Tab("#box", {}, "current", "banner show", "banner");
   </script>
 </html>
